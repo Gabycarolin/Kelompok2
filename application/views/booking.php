@@ -98,21 +98,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="<?= base_url('home'); ?>" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Dashboard Transaksi</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>Dashboard Customer</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>Dashboard Admin</p>
                 </a>
               </li>
             </ul>
@@ -122,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
-                Extras
+                Aksi
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -130,13 +130,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li class="nav-item">
                 <a href="pages/examples/login.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
+                  <p>Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/register.html" class="nav-link">
+                <a href="<?= base_url('home/daftar');?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
+                  <p>Daftarkan Admin</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -151,146 +151,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <p>Recover Password</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lockscreen</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/language-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Language Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/pace.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pace</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
-                </a>
-              </li>
+             
             </ul>
-          </li>
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
-            </a>
-          </li>
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                Level 1
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-              <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Level 2
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
-            </a>
           </li>
         </ul>
       </nav>
@@ -339,10 +201,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Gak tau diisi apa</a>
+                      <a class="nav-link active" href="#data-belumlunas" data-toggle="tab">Transaksi belum lunas</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Gak tau diisi apa</a>
+                      <a class="nav-link" href="#data-lunas" data-toggle="tab">Transaksi apa</a>
                     </li>
                   </ul>
                 </div>
@@ -350,12 +212,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="card-body">
                 <div class="tab-content p-0">
                   <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="revenue-chart"
+                  <div class="chart tab-pane active" id="data-belumlunas"
                        style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>                         
+                     <table class="table table-responsive">
+                        <tr>
+                          <th class="text-center">ID Booking</th>
+                          <th class="text-center">ID Customer</th>
+                          <th class="text-center">Nama Lapangan</th>
+                          <th class="text-center">Waktu Mulai</th>
+                          <th class="text-center">Waktu Berakhir</th>
+                          <th class="text-center">Durasi</th>
+                          <th class="text-center">Harga</th>
+                          <th class="text-center">Status</th>
+                          <th class="text-center">Aksi</th>
+                        </tr>
+
+                        <?php 
+                        foreach($dataBooking as $row)
+                        ?>
+                        
+                        <tr>
+                          <td><?= $row->id_booking; ?></td>
+                          <td><?= $row->id_cust; ?></td>
+                          <td><?= $row->nama_lapangan; ?></td>
+                          <td><?= $row->waktu_mulai; ?></td>
+                          <td><?= $row->waktu_berakhir; ?></td>
+                          <td><?= $row->total_durasi; ?></td>
+                          <td><?= $row->total_harga; ?></td>
+                          <td><?= $row->status; ?></td>
+                          <td><a class="btn btn-success" href="#">Lunas</a></td>
+                        </tr>
+
+                     </table>
+                      <!-- <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas> -->
                    </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>                         
+                  <div class="chart tab-pane" id="data-lunas" style="position: relative; height: 300px;">
+                    <table class="table table-responsive">
+                        <tr>
+                          <th class="text-center">ID Booking</th>
+                          <th class="text-center">ID Customer</th>
+                          <th class="text-center">Nama Lapangan</th>
+                          <th class="text-center">Waktu Mulai</th>
+                          <th class="text-center">Waktu Berakhir</th>
+                          <th class="text-center">Durasi</th>
+                          <th class="text-center">Harga</th>
+                          <th class="text-center">Status</th>
+                        </tr>
+
+                        <?php 
+                        foreach($dataBooking as $row)
+                        ?>
+                        
+                        <tr>
+                          <td><?= $row->id_booking; ?></td>
+                          <td><?= $row->id_cust; ?></td>
+                          <td><?= $row->nama_lapangan; ?></td>
+                          <td><?= $row->waktu_mulai; ?></td>
+                          <td><?= $row->waktu_berakhir; ?></td>
+                          <td><?= $row->total_durasi; ?></td>
+                          <td><?= $row->total_harga; ?></td>
+                          <td><?= $row->status; ?></td>
+                        </tr>
+
+                     </table>
+                    <!-- <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas> -->                         
                   </div>  
                 </div>
               </div><!-- /.card-body -->
