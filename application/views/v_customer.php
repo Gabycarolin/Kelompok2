@@ -104,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Home/listCustomer'); ?>" class="nav-link">
+                <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Customer</p>
                 </a>
