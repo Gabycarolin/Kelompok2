@@ -28,8 +28,10 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Buat Password Baru</p>
-
+                <center>
+                    <h3>Lupa Password</h3>
+                </center>
+                <br>
                 <form action="recover-password.html" method="post">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email">
@@ -41,7 +43,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Request new password</button>
+                            <button type="submit" class="btn btn-primary btn-block">Verifikasi</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -51,7 +53,7 @@
                     <a href="login.html">Login</a>
                 </p>
                 <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
+                    <a href="register.html" class="text-center">Daftar Admin Baru</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
