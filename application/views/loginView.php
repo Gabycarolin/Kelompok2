@@ -33,22 +33,61 @@
                     <h3>LOGIN</h3>
                 </center>
                 <br>
-                <form action="../../index3.html" method="post">
+                <?php
+                $success    = $this->session->flashdata('success');
+                $error        = $this->session->flashdata('error');
+                $warning    = $this->session->flashdata('warning');
+
+                if ($success) {
+                    $alert_status    = 'alert-success';
+                    $status            = 'Success!';
+                    $message        = $success;
+                }
+
+                if ($error) {
+                    $alert_status    = 'alert-danger';
+                    $status            = 'Error!';
+                    $message        = $error;
+                }
+
+                if ($warning) {
+                    $alert_status    = 'alert-warning';
+                    $status            = 'Warning!';
+                    $message        = $warning;
+                }
+                ?>
+
+                <?php if ($success || $error || $warning) : ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert <?= $alert_status ?> alert-dismissible fade show" role="alert">
+                                <strong><?= $status ?></strong> <?= $message ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif ?>
+
+                <form action="<?php echo base_url('login/auth') ?>" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <?= form_input(['type' => 'email', 'name' => 'email', 'value' => $email, 'class' => 'form-control', 'placeholder' => 'Masukkan alamat email', 'required' => true]) ?>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
+                        <?= form_error('email') ?>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <?= form_password('password', '', ['class' => 'form-control', 'placeholder' => 'Masukkan password', 'required' => true]) ?>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
+                        <?= form_error('password') ?>
                     </div>
                     <div class="row">
                         <div class="col-8">
