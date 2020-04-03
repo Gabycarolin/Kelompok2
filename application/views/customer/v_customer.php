@@ -54,33 +54,27 @@
                        style="position: relative; height: 300px;">
                      <table class="table table-responsive">
                         <tr>
-                          <th class="text-center">ID Booking</th>
                           <th class="text-center">ID Customer</th>
-                          <th class="text-center">Nama Lapangan</th>
-                          <th class="text-center">Waktu Mulai</th>
-                          <th class="text-center">Waktu Berakhir</th>
-                          <th class="text-center">Durasi</th>
-                          <th class="text-center">Harga</th>
-                          <th class="text-center">Status</th>
-                          <th class="text-center">Aksi</th>
+                          <th class="text-center">Nama Customer</th>
+                          <th class="text-center">Alamat Customer</th>
+                          <th class="text-center">Telepon Customer</th>
+                          <th class="text-center">Username Customer</th>
+                          <th class="text-center">Email Customer</th>
                         </tr>
 
                         <?php 
                         
-                          foreach($dataBooking as $row){
+                          foreach($dataCust as $row){
                         
                         ?>
                         
                         <tr>
-                          <td><?= $row->id_booking; ?></td>
                           <td><?= $row->id_cust; ?></td>
-                          <td><?= $row->nama_lapangan; ?></td>
-                          <td><?= $row->waktu_mulai; ?></td>
-                          <td><?= $row->waktu_berakhir; ?></td>
-                          <td><?= $row->total_durasi; ?></td>
-                          <td><?= $row->total_harga; ?></td>
-                          <td><?= $row->status; ?></td>
-                          <td><a class="btn btn-success" href="#">Lunas</a></td>
+                          <td><?= $row->nama_cust; ?></td>
+                          <td><?= $row->alamat_cust; ?></td>
+                          <td><?= $row->telp_cust; ?></td>
+                          <td><?= $row->username_cust; ?></td>
+                          <td><?= $row->email_cust; ?></td>
                         </tr>
                         <?php } ?>
 

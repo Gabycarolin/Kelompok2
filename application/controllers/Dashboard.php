@@ -9,8 +9,7 @@ class Dashboard extends CI_Controller{
 	}
 
 	public function index(){
-		$data['dataBooking'] = $this->m_data->ambil_data();
-		$data['dataLunas'] = $this->m_data->dataFullpay();
+		$data['dataBook'] = $this->m_data->ambilDataBook();
 		$this->load->view('templates/sidebar');
 		$this->load->view('booking/booking',$data);
 	}
@@ -21,8 +20,9 @@ class Dashboard extends CI_Controller{
 	// }
 
 	public function dataCustomer(){
+		$data['dataCust'] = $this->m_data->ambilDataCustomer();
 		$this->load->view('templates/sidebar');
-		$this->load->view('customer/v_customer');
+		$this->load->view('customer/v_customer', $data);
 	}
 
 	public function daftar(){

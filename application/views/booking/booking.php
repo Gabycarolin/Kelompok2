@@ -67,15 +67,18 @@
 
                         <?php 
                         
-                          foreach($dataBooking as $row){
+                          foreach($dataBook as $row){
                         
                         ?>
                         
                         <tr>
                           <td><?= $row->id_booking; ?></td>
-                          <td><?= $row->id_cust; ?></td>
                           <td><?= $row->id_futsal; ?></td>
+                          <td><?= $row->nama_futsal; ?></td>
                           <td><?= $row->id_lapangan; ?></td>
+                          <td><?= $row->nama_lapangan; ?></td>
+                          <td><?= $row->id_cust; ?></td>
+                          <td><?= $row->nama_cust; ?></td>
                           <td><?= $row->waktu_mulai; ?></td>
                           <td><?= $row->waktu_berakhir; ?></td>
                           <td><?= $row->total_durasi; ?></td>
