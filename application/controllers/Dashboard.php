@@ -30,8 +30,9 @@ class Dashboard extends CI_Controller{
 	}
 
 	public function dataOwner(){
+		$data['dataOwner'] = $this->m_data->ambilDataOwner();
 		$this->load->view('templates/sidebar');
-		$this->load->view('profile');
+		$this->load->view('owner/profile', $data);
 	}
 
 

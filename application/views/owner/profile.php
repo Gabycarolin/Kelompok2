@@ -6,13 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
+            <h1 class="m-0 text-dark">Data Customer</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -34,15 +28,12 @@
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-pie mr-1"></i>
-                  Data Booking
+                  Data Customer
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
                       <a class="nav-link active" href="#data-belumlunas" data-toggle="tab">Transaksi belum lunas</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#data-lunas" data-toggle="tab">Transaksi apa</a>
                     </li>
                   </ul>
                 </div>
@@ -54,33 +45,27 @@
                        style="position: relative; height: 300px;">
                      <table class="table table-responsive">
                         <tr>
-                          <th class="text-center">ID Booking</th>
                           <th class="text-center">ID Customer</th>
-                          <th class="text-center">Nama Lapangan</th>
-                          <th class="text-center">Waktu Mulai</th>
-                          <th class="text-center">Waktu Berakhir</th>
-                          <th class="text-center">Durasi</th>
-                          <th class="text-center">Harga</th>
-                          <th class="text-center">Status</th>
-                          <th class="text-center">Aksi</th>
+                          <th class="text-center">Nama Customer</th>
+                          <th class="text-center">Alamat Customer</th>
+                          <th class="text-center">Telepon Customer</th>
+                          <th class="text-center">Username Customer</th>
+                          <th class="text-center">Email Customer</th>
                         </tr>
 
                         <?php 
                         
-                          foreach($dataBooking as $row){
+                          foreach($dataOwner as $row){
                         
                         ?>
                         
                         <tr>
-                          <td><?= $row->id_booking; ?></td>
-                          <td><?= $row->id_cust; ?></td>
-                          <td><?= $row->nama_lapangan; ?></td>
-                          <td><?= $row->waktu_mulai; ?></td>
-                          <td><?= $row->waktu_berakhir; ?></td>
-                          <td><?= $row->total_durasi; ?></td>
-                          <td><?= $row->total_harga; ?></td>
-                          <td><?= $row->status; ?></td>
-                          <td><a class="btn btn-success" href="#">Lunas</a></td>
+                          <td><?= $row->id_futsal; ?></td>
+                          <td><?= $row->nama_futsal; ?></td>
+                          <td><?= $row->alamat_futsal; ?></td>
+                          <td><?= $row->telp_futsal; ?></td>
+                          <td><?= $row->username_futsal; ?></td>
+                          <td><?= $row->email_futsal; ?></td>
                         </tr>
                         <?php } ?>
 
@@ -99,22 +84,6 @@
                           <th class="text-center">Harga</th>
                           <th class="text-center">Status</th>
                         </tr>
-
-                        <?php 
-                        foreach($dataLunas as $row){
-                        ?>
-                        
-                        <tr>
-                          <td><?= $row->id_booking; ?></td>
-                          <td><?= $row->id_cust; ?></td>
-                          <td><?= $row->nama_lapangan; ?></td>
-                          <td><?= $row->waktu_mulai; ?></td>
-                          <td><?= $row->waktu_berakhir; ?></td>
-                          <td><?= $row->total_durasi; ?></td>
-                          <td><?= $row->total_harga; ?></td>
-                          <td><?= $row->status; ?></td>
-                        </tr>
-                      <?php  } ?>
 
                      </table>
                     <!-- <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas> -->                         

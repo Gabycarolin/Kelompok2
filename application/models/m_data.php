@@ -9,19 +9,16 @@ class M_data extends CI_Model{
 	public function dataFullpay(){
 		// $result = array();
 		return $dataFull = $this->db->query("select * from tb_booking where status = 'Lunas'")->result();
-		// $query = $this->db->get();
-
-		// if($dataFull->num_rows() > 0){
-		// 	$results = $query->$result();
-		// 	}
-		// 	return $results;
-		// }
 		
 	}
 
 	public function ambilDataCustomer(){
 		return $dataCust = $this->db->query("SELECT * From tb_customer")->result();
 
+	}
+
+	public function ambilDataOwner(){
+		return $dataOwner = $this->db->query("SELECT * From tb_futsal")->result();
 	}
 
 	public function ambilDataBook(){
