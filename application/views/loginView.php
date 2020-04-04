@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 <?php endif ?>
-
+                <!--dikirim ke form action 'login auth'-->
                 <form action="<?php echo base_url('login/auth') ?>" method="post">
                     <div class="input-group mb-3">
                         <?= form_input(['type' => 'email', 'name' => 'email', 'value' => $email, 'class' => 'form-control', 'placeholder' => 'Masukkan alamat email', 'required' => true]) ?>

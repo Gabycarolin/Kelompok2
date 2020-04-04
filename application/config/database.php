@@ -72,7 +72,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-
+//bertugas untuk memanggil tabel2 yang ada di database (tb_ -> merupakan previk (awalan) jadi apabila memanggil tabel langsung ketikkan booking, futsal, dll tanpa tb_)
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '127.0.0.1',
