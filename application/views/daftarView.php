@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>AdminFutsal | Halaman Daftar</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,96 +32,76 @@
                     <h3>DAFTAR</h3>
                 </center>
                 <br>
-                <!-- <form action="../../index.html" method="post"> -->
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Nama Lengkap">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <!-- <span class="fas fa-user"></span> -->
+                <form class="user" method="post" action="<?= base_url('Daftar') ?>">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nama Lengkap">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Alamat">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <!-- <span class="fas fa-user"></span> -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="No. Telepon">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <!-- <span class="fas fa-user"></span> -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="telp" name="telp" placeholder="No. Telepon">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Email">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <!-- <span class="fas fa-envelope"></span> -->
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Username">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <!-- <span class="fas fa-envelope"></span> -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Konfirmasi password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Konfirmasi password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
+                    <div class="input-group mb-3">
                         <div class="icheck-primary">
-                            <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                            <label for="agreeTerms">
-                                I agree to the <a href="#">terms</a>
+                            <input type="checkbox" id="valid" name="valid" value="valid">
+                            <label for="valid">
+                                Apakah data yang dimasukkan sudah benar ?</a>
                             </label>
                         </div>
                     </div>
-                    <!-- /.col -->
-                    <div class="col-4">
+                    <div class="input-group mb-0">
                         <button type="submit" class="btn btn-primary btn-block">Daftar</button>
                     </div>
-                    <!-- /.col -->
-                </div>
-                <!-- </form> -->
-                <!-- 
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i>
-                        Sign up using Facebook
-                    </a>
-                    <a href="#" class="C">
-                        <i class="fab fa-google-plus mr-2"></i>
-                        Sign up using Google+
-                    </a>
-                </div> -->
-
-                <a href="login.html" class="text-center">Saya sudah punya Akun</a>
+                </form>
             </div>
-            <!-- /.form-box -->
-        </div><!-- /.card -->
+            <a href="<?= base_url('Login') ?>" class="text-center">Saya sudah punya Akun</a>
+            <br>
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
     </div>
     <!-- /.register-box -->
 

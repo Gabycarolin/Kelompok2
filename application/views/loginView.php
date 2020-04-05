@@ -109,10 +109,10 @@
                 <!-- /.social-auth-links -->
 
                 <p class="mb-1">
-                    <a href="forgot-password.html">Lupa Password ?</a>
+                    <a href="<?= base_url('LupaPassword') ?>">Lupa Password ?</a>
                 </p>
                 <p class="mb-0">
-                    <a href="register.html" class="text-center">Belum punya akun? Daftar disini!</a>
+                    <a href="<?= base_url('Daftar') ?>" class="text-center">Belum punya akun? Daftar disini!</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
