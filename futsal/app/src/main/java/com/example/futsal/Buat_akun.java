@@ -12,6 +12,14 @@ public class Buat_akun extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buat_akun);
+        TextView btn = (TextView) findViewById(R.id.button2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent inte = new Intent(Buat_akun.this, MainActivity.class);
+                startActivity(inte);
+            }
+        });
 
     }
-}
+    }
