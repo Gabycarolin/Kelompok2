@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('Dashboard'); ?>" class="nav-link">
+                <a href="<?= base_url('Dashboard/dataBook'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Transaksi</p>
                 </a>

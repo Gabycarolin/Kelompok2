@@ -6,18 +6,18 @@ class Dashboard extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('m_data');
+		$this->load->library('form_validation');
 	}
 
 	public function index(){
+		
+	}
+
+	public function dataBook(){
 		$data['dataBook'] = $this->m_data->ambilDataBook();
 		$this->load->view('templates/sidebar');
 		$this->load->view('booking/booking',$data);
 	}
-
-	// public function fullPayment(){
-	// 	$data['dataLunas'] = $this->m_data->dataFullpay();
-	// 	$this->load->view('booking',$data);
-	// }
 
 	public function dataCustomer(){
 		$data['dataCust'] = $this->m_data->ambilDataCustomer();
