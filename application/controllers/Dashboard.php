@@ -20,7 +20,7 @@ class Dashboard extends CI_Controller{
 		$this->load->view('booking/booking',$data);
 	}
 
-	public function dataCustomer(){
+	public function dataCust(){
 		$data['dataCust'] = $this->m_data->ambilDataCustomer();
 		$this->load->view('templates/sidebar');
 		$this->load->view('customer/v_customer', $data);
@@ -34,6 +34,12 @@ class Dashboard extends CI_Controller{
 		$data['dataOwner'] = $this->m_data->ambilDataOwner();
 		$this->load->view('templates/sidebar');
 		$this->load->view('owner/profile', $data);
+	}
+
+	public function dataProfil(){
+
+		$this->load->view('profil/profil');
+
 	}
 
 

@@ -67,8 +67,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">            
+            <a href="<?= base_url('dashboard/dataProfil'); ?>" class="nav-link">
+              <i class="nav-icon fas"></i>
+              <p>
+                Profil
+                <i class="right fas"></i>
+              </p>
+            </a>
+          </li>     
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -77,13 +86,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('Dashboard/dataBook'); ?>" class="nav-link">
+                <a href="<?= base_url('dashboard/dataBook'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Transaksi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('dashboard/dataCustomer'); ?>" class="nav-link">
+                <a href="<?= base_url('dashboard/dataCust'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Customer</p>
                 </a>
@@ -97,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li class="nav-item">
                 <a href="<?= base_url('dashboard/dataOwner'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Profile Owner</p>
+                  <p>Dashboard Owner</p>
                 </a>
               </li>
             </ul>
