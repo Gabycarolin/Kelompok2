@@ -92,12 +92,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('dashboard/dataCust'); ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard Customer</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Lapangan</p>
@@ -107,6 +101,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?= base_url('dashboard/dataOwner'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard Owner</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas"></i>
+              <p>
+                Dashboard Lapangan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url('dashboard/tambahLapangan'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Lapangan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Edit Lapangan</p>
                 </a>
               </li>
             </ul>

@@ -42,6 +42,11 @@ class Dashboard extends CI_Controller{
 
 	}
 
+	public function tambahLapangan(){
+		$this->load->view('templates/sidebar');
+		$this->load->view('lapangan/v_tambahLap');
+	}
+
 
 }
 
