@@ -14,16 +14,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-        TextView btn = (TextView) findViewById(R.id.daftardisini);
-        btn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View arg0) {
-                Intent inte = new Intent( MainActivity.this, Buat_akun.class);
-                startActivity(inte);
-            }
-        });
+        setContentView(R.layout.booking);
+
     }
 
 }
