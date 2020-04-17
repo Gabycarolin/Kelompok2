@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Forgot Password</title>
+    <title>AdminFutsal | Lupa Password</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,38 +23,45 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="<?= base_url() ?>assets/index2.html"><b>Admin</b>LTE</a>
+            <a href="<?= base_url() ?>assets/index2.html"><b>Admin</b>Futsal</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
+
+                <?php if ($this->session->flashdata('sukses')) { ?>
+                    <div class="alert alert-success">
+                        <?= $this->session->flashdata('sukses') ?>
+                    </div>
+                <?php } ?>
+
                 <center>
                     <h3>Lupa Password</h3>
                 </center>
                 <br>
-                <form action="recover-password.html" method="post">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Verifikasi</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
 
-                <p class="mt-3 mb-1">
-                    <a href="login.html">Login</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Daftar Admin Baru</a>
-                </p>
+                <form action="<?php echo base_url('lupaPassword') ?>" method="post">
+                <div class="input-group mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Masukkan Email Anda">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <p class="mb-1">
+                            <a href="<?= base_url('Auth') ?>">Kembali</a>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" value="reset password" class="btn btn-primary btn-block">Verifikasi</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <br>
+                </form>
             </div>
             <!-- /.login-card-body -->
         </div>

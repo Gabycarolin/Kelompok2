@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'siball',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => 'tb_',
+	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
