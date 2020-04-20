@@ -6,4 +6,12 @@
     <string name="Simpan">simpan</string>
     <string name="Futsal">Futsal</string>
     <string name="tanggal">tanggal</string>
+    <string-array name="durasi_jam">
+        <item>1 Jam</item>
+        <item>2 Jam</item>
+        <item>3 Jam</item>
+        <item>4 Jam</item>
+        <item>5 Jam</item>
+        <item>6 Jam</item>
+    </string-array>
 </resources>
