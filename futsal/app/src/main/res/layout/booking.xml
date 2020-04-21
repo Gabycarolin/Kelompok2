@@ -24,44 +24,30 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="RtlCompat">
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorbooking"
-                android:radius="12dp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="168dp"
-                tools:layout_editor_absoluteY="362dp" />
-            <TextView
-                android:id="@+id/tanggal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:gravity="left"
-                android:text="Durasi Penyewaan (/Jam)"
-                android:textColor="#000000"
-                android:textSize="19dp"
-                android:typeface="normal" />
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Tanggal_Booking"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                android:textColor="#FFFFFF"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent"
                 >
+                <Button
+                    android:id="@+id/bt_datepicker"
+                    android:text="Tanggal Booking"
+                    android:layout_marginRight="95dp"
+                    android:layout_width="140dp"
+                    android:layout_height="35dp" />
+                <TextView
+                    android:text="Tanggal dipilih : "
+                    android:layout_marginRight="80dp"
+                    android:id="@+id/tv_dateresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tanggal Booking"
-                    android:inputType="text"
-                    />
+
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -69,12 +55,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginLeft="10dp"
                 android:gravity="left"
                 android:text="Durasi Penyewaan (/Jam)"
                 android:textColor="#000000"
-                android:textSize="19dp"
+                android:textSize="16dp"
                 android:typeface="normal" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -82,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Tanggal_Booking"
                 android:layout_marginLeft="1dp"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="75dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 android:paddingStart="50dp"
