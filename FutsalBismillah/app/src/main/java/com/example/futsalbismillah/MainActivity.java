@@ -1,37 +1,55 @@
 package com.example.futsalbismillah;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-public class MainActivity extends AppCompatActivity {
+import android.view.View;
+import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class MainActivity extends AppCompatActivity {
+    Button tiket, akun;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav.setOnNavigationItemSelectedListener(navLitener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new homeActivity()).commit();
     }
 
-    //membuat menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottomnavigation_menu,menu);
-        return true;
-    }
+    private BottomNavigationView.OnNavigationItemSelectedListener navLitener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
 
-    //membuat pilihan menu
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if (item.getItemId()==R.id.icon_tiket){
-            Intent inte = new Intent(MainActivity.this, tiket.class);
-            startActivity(inte);
-        }if (item.getItemId()==R.id.icon_akun){
-            Intent inte = new Intent(MainActivity.this, Akun.class);
-            startActivity(inte);
-        }
-        return true;
-    }
+                    switch (item.getItemId()){
+                        case R.id.nav_home:
+                            selectedFragment = new homeActivity();
+                            break;
+                        case R.id.nav_tiket:
+                            selectedFragment = new tiketawalActivity();
+                            break;
+                        case R.id.nav_akun:
+                            selectedFragment = new akunActivity();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+                    return true;
+                }
+            };
+
+
 }

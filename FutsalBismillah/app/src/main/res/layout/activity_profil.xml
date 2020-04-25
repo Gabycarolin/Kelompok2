@@ -6,14 +6,6 @@
     android:background="@drawable/background"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnkembali"
-        android:layout_width="32dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="10sp"
-        style="?android:attr/borderlessButtonStyle"
-        android:background="@drawable/btnback" />
 
     <Button
         android:id="@+id/btnlogout"
@@ -46,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="84dp"
         android:layout_marginStart="70dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="70dp"
         android:src="@drawable/profil" />
 
@@ -53,6 +46,7 @@
         android:id="@+id/atasusername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="199dp"
         android:layout_marginTop="100dp"
         android:hint="Username"
@@ -63,6 +57,7 @@
         android:id="@+id/txtnama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:text="Nama Lengkap"
         android:textColor="#fff"
         android:layout_marginTop="160dp"
@@ -72,6 +67,7 @@
         android:id="@+id/namalengkap"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="183dp"
         android:layout_marginEnd="50dp"
@@ -88,12 +84,14 @@
         android:text="Alamat"
         android:textColor="#fff"
         android:layout_marginTop="218dp"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="59dp"/>
 
     <TextView
         android:id="@+id/alamat"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="50dp"
@@ -107,6 +105,7 @@
         android:id="@+id/txttelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:text="No.Telp"
         android:textColor="#fff"
         android:layout_marginTop="274dp"
@@ -116,6 +115,7 @@
         android:id="@+id/telp"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="296dp"
         android:layout_marginEnd="50dp"
@@ -131,6 +131,7 @@
         android:layout_height="wrap_content"
         android:text="Email"
         android:textColor="#fff"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="330dp"
         android:layout_marginStart="59dp"/>
 
@@ -139,6 +140,7 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="352dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/radiusprofilnama"
@@ -151,6 +153,7 @@
         android:id="@+id/txtusername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:text="Username"
         android:textColor="#fff"
         android:layout_marginTop="385dp"
@@ -160,6 +163,7 @@
         android:id="@+id/username"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="407dp"
         android:layout_marginEnd="50dp"
@@ -172,6 +176,7 @@
     <TextView
         android:id="@+id/txtpassword"
         android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_height="wrap_content"
         android:text="Password"
         android:textColor="#fff"
@@ -185,6 +190,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="461dp"
         android:layout_marginEnd="50dp"
+        android:layout_alignParentTop="true"
         android:background="@drawable/radiusprofilnama"
         android:hint="*******"
         android:paddingStart="10sp"
@@ -195,6 +201,7 @@
         android:id="@+id/txtkonfir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:text="Konfirmasi Password"
         android:textColor="#fff"
         android:layout_marginTop="494dp"
@@ -205,6 +212,7 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="516dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/radiusprofilnama"
@@ -216,6 +224,7 @@
     <Button
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_height="28dp"
         android:layout_marginStart="300dp"
         android:layout_marginTop="590dp"

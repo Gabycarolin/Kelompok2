@@ -16,10 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Akun"></activity>
-        <activity android:name=".tiket"
-            android:label="E-Tiket">
-        </activity>
+        <activity android:name=".tiketActivity" />
+        <activity android:name=".akunActivity" />
+        <activity android:name=".databookingActivity"/>
+        <activity android:name=".tiketawalActivity"/>
     </application>
 
 </manifest>

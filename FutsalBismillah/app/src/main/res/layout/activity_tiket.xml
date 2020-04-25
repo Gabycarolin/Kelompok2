@@ -1,6 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnkembali"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/btnback" />
+
+    <TextView
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="E-TIKET"
+        android:textColor="#FFFF"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#555"
+        android:layout_marginTop="50dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="237dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/background"
+            android:text="STATUS :"
+            android:textSize="20dp"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:text="TERBAYAR"
+            android:textSize="20dp"
+            android:textColor="#FFFF0000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="304dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="162dp"
+        android:background="#464C63">
+
+        <TextView
+            android:id="@+id/namafutsal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="FUTSAL SPORT"
+            android:layout_alignParentLeft="true"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kode Booking :"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginTop="67sp"
+            android:layout_marginStart="58dp"/>
+
+        <TextView
+            android:id="@+id/kodebooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="E411909238"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:layout_marginTop="67sp"
+            android:layout_marginStart="165dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail :"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/lapangankeberapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lapangan 2"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/02/2020"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="195dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/jambooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:00-10:00"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="195dp"
+            android:layout_marginStart="110dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/harga"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Rp 120000"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_marginTop="220dp"
+            android:layout_marginStart="30dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
