@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".Buat_akun"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Buat Akun"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/kembalikelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Kembali"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:typeface="normal"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="100">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No.Telp"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="13">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10">
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10">
+        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10">
+        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="1dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Password"
+            android:textColor="#1b1b1b"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10">
+        </EditText>
+
+    </LinearLayout>
+
+    androidx.widget.LinearLayout="horizontal"
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
+        android:text="Dengan melakukan pndaftaran, saya setuju dengan kebijakan"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText5"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="Simpan" />
+
+
+
+
+</LinearLayout>
+
