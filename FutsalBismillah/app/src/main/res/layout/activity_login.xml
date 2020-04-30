@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,8 @@
         tools:ignore="MissingConstraints">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/bglist">
             <Button
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -31,6 +32,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Login"
+                android:background="@drawable/bglist"
                 style="?android:attr/borderlessButtonStyle"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
@@ -124,9 +126,6 @@
                     android:paddingTop="5dp"
                     android:text="Lupa Password?"
                     android:textColor="#FFFFFF" />
-
-
-
 
             </com.google.android.material.textfield.TextInputLayout>
 
