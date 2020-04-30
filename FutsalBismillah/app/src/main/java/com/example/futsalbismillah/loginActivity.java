@@ -1,6 +1,7 @@
 package com.example.futsalbismillah;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,14 +69,24 @@ public class loginActivity extends AppCompatActivity {
 
                     if(res.getBoolean("status")){
                         JSONObject respon = res.getJSONObject("data");
-                        String name = respon.getString("nama_cust").trim();
+                                    String name = respon.getString("nama_cust").trim();
                                     String alamat = respon.getString("alamat_cust").trim();
+                                    String email = respon.getString("email_cust").trim();
+                                    String telp = respon.getString("telp_cust").trim();
+                                    String username = respon.getString("username_cust").trim();
+                                    String password = respon.getString("password_cust").trim();
 //
                                     Toast.makeText(loginActivity.this,
                                             "berhasil login. \nYour Name : "
                                                     +name+"\nYour Alamat : "
                                                     +alamat, Toast.LENGTH_SHORT)
                                             .show();
+                                    Preferences.setKeyUsernameSedangLogin(getBaseContext(), username);
+                                    Preferences.setNama(getBaseContext(), name);
+                                    Preferences.setAlamat(getBaseContext(), alamat);
+                                    Preferences.setEmail(getBaseContext(), email);
+                                    Preferences.setTelepon(getBaseContext(), telp);
+                                    Preferences.setPassword(getBaseContext(), password);
                                     Intent intent = new Intent(loginActivity.this, MainActivity.class);
                                     startActivity(intent);
 
@@ -107,26 +118,6 @@ public class loginActivity extends AppCompatActivity {
                 return params;
             }
         };
-//        senddata.setRetryPolicy(new DefaultRetryPolicy(
-//                100,
-//                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-//                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-//        senddata.setRetryPolicy(new RetryPolicy() {
-//            @Override
-//            public int getCurrentTimeout() {
-//                return 50000;
-//            }
-//
-//            @Override
-//            public int getCurrentRetryCount() {
-//                return 50000;
-//            }
-//
-//            @Override
-//            public void retry(VolleyError error) throws VolleyError {
-//
-//            }
-//        });
         AppController.getInstance().addToRequestQueue(senddata);
     }
 

@@ -50,6 +50,7 @@
         android:layout_marginStart="199dp"
         android:layout_marginTop="100dp"
         android:hint="Username"
+        android:textColor="#fff"
         android:textSize="20dp"
         />
 
