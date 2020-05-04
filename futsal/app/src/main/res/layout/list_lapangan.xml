@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="8dp"
+    android:orientation="horizontal"
+    android:background="@color/colorbooking">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@drawable/lapangan1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lapangan 1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_keterangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="harga 70.00/2 jam"
+            android:textColor="@color/colorwhite" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

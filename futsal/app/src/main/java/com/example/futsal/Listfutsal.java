@@ -1,6 +1,7 @@
 package com.example.futsal;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class Listfutsal extends AppCompatActivity {
             "Jl.Mastrip 5 Jember","Jl.Nias III Jember"
     };
     img = new String[] {
-                Integer.toString(R.drawable.futsal2) , Integer.toString(R.drawable.futsal2)
+                Integer.toString(R.drawable.futsal1) , Integer.toString(R.drawable.futsal2)
     };
 
     mylist=new ArrayList<HashMap<String, String>>();
@@ -35,6 +36,7 @@ public class Listfutsal extends AppCompatActivity {
         map = new HashMap<String, String>();
         map.put("judul", jdl[i]);
         map.put("keterangan",ktr[i]);
+        Log.d("pesan", img[i]);
         map.put("Gambar", img[i]);
         mylist.add(map);
     }
