@@ -33,48 +33,51 @@
                     <h3>Ubah Password</h3>
                 </center>
                 <br>
-                <!--dikirim ke form action 'login auth'-->
-                <form action="<?php echo base_url('login/auth') ?>" method="post">
+
+                <!-- alert sukses -->
+                <?= $this->session->flashdata('sukses'); ?>
+
+                <!-- alert password baru -->
+                <?= form_error('pass_baru', '<div class=" alert alert-danger" role="alert">', '</div>'); ?>
+                <?= form_error('confirm_pass', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+
+                <form action="<?php echo base_url('ubahPassword') ?>" method="post">
                     <div class="input-group mb-3">
-                        <?= form_password('password1', '', ['class' => 'form-control', 'placeholder' => 'Masukkan Password Baru', 'required' => true]) ?>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
+                        <input type="password" label="pass1" class="form-control" name="pass_baru" placeholder="Masukkan Password Baru">
+                        <!-- <div class="alert">
+                            <span class="fas fa-lock"></span>
+                        </div> -->
                     </div>
                     <div class="input-group mb-3">
-                        <?= form_password('password2', '', ['class' => 'form-control', 'placeholder' => 'Konfirmasi Password Baru', 'required' => true]) ?>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
+                        <input type="password" label="pass2" class="form-control" name="confirm_pass" placeholder="Konfirmasi Password">
+                        <!-- <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-8">
                             <p class="mb-1">
-                                <a href="<?= base_url('LupaPassword') ?>">Kembali</a>
+                                <a href="<?= base_url('lupaPassword') ?>">Kembali</a>
                             </p>
                         </div>
                         <div class="col-4">
-                            <button type="submit" value="reset password" class="btn btn-primary btn-block">Simpan</button>
+                            <button type="submit" value="reset password" class="btn btn-primary btn-block">Verifikasi</button>
                         </div>
+                        <!-- /.col -->
+                    </div>
+                    <br>
+                    <!-- /.login-card-body -->
                 </form>
-                <br>
-                <!-- /.social-auth-links -->
             </div>
-            <!-- /.login-card-body -->
         </div>
-    </div>
-    <!-- /.login-box -->
+        <!-- /.login-box -->
 
-    <!-- jQuery -->
-    <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="<?= base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="<?= base_url() ?>assets/dist/js/adminlte.min.js"></script>
+        <!-- jQuery -->
+        <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="<?= base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="<?= base_url() ?>assets/dist/js/adminlte.min.js"></script>
 
 </body>
 

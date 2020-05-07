@@ -32,17 +32,30 @@
                 <center>
                     <h3>LOGIN</h3>
                 </center>
-                <p class="login-box-msg">Masukan Username dan Password</p>   
+
+                <!--alert lupa_pass-->
+                <?= $this->session->flashdata('lupa_pass'); ?>
+
+                <!--alert username dan password salah-->
+                <?= $this->session->flashdata('pesan'); ?>
+
+                <!-- alert kecocokkan username -->
+                <?= form_error('username', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+
+                <!-- alert kecocokkan password -->
+                <?= form_error('password', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+
+                <p class="login-box-msg">Masukan Username dan Password</p>
 
                 <!--dikirim ke form action 'login auth'-->
                 <form action="<?php echo base_url('Auth') ?>" method="post">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="username" placeholder="Username" value="<?= set_value('username'); ?>">
-                        <?= form_error('username', '<small class="text-danger">', '</small>');?>
+
                     </div>
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" name="password" placeholder="Password">
-                        <?= form_error('password', '<small class="text-danger">', '</small>');?>
+
                     </div>
                     <div class="row">
                         <div class="col-8">

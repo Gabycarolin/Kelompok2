@@ -33,14 +33,6 @@ class Auth extends CI_Controller
 	private function _masuk()
 	{
 
-		// query tb_futsal where username dan password futsal
-		// $user = $this->db->get_where('tb_pengelola', 
-		// 	[
-		// 		'username_pengelola' => $username,
-		// 		'password_pengelola' => $password
-
-		// ])->row_array();
-
 		$username = $this->input->post('username'); // mengambil data post username
 		$password = $this->input->post('password');	// mengambil data post password
 
