@@ -64,7 +64,7 @@ class Dashboard extends CI_Controller
 		}
 
 		$this->load->view('templates/sidebar');
-		$this->load->view('auth/v_lupaPassword', $data);
+		$this->load->view('dashboardView', $data);
 	}
 
 
