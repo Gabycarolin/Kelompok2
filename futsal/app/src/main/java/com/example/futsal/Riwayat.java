@@ -12,13 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-public class Listlapangan extends AppCompatActivity {
+public class Riwayat extends AppCompatActivity {
     ListView listView;
     SimpleAdapter adapter;
     HashMap<String, String> map;
     ArrayList<HashMap<String,String>> mylist;
     String[] jdl;
     String [] ktr;
+    String [] ktr2;
+    String [] ktr3;
     String [] img;
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -27,13 +29,19 @@ public class Listlapangan extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list_view);
 
         jdl = new String[] {
-                "Lapangan 1","Lapangan 2"
+                "Zona Futsal","Elphasindo Futsal"
         };
         ktr = new String[]{
-                "harga 70.000/2 jam","harga 100.000/2 jam"
+                "LAPANGAN 1","LAPANGAN 1"
+        };
+        ktr2 = new String[]{
+                "20-3-2020 08.00-10.00 / 2 jam", "15-5-2020 18.00-20.00 / 2 jam"
+        };
+        ktr3 = new String[]{
+                "Kode Booking : RL9O011T7","Kode Booking : 09LK011T7"
         };
         img = new String[] {
-                Integer.toString(R.drawable.lapangan1) , Integer.toString(R.drawable.lapangan2)
+                Integer.toString(R.drawable.logoriwayat),Integer.toString(R.drawable.logoriwayat)
         };
 
         mylist=new ArrayList<HashMap<String, String>>();
@@ -41,13 +49,16 @@ public class Listlapangan extends AppCompatActivity {
             map = new HashMap<String, String>();
             map.put("judul", jdl[i]);
             map.put("keterangan",ktr[i]);
+            map.put("keterangan2",ktr2[i]);
+            map.put("keterangan3",ktr3[i]);
             Log.d("pesan", img[i]);
             map.put("Gambar", img[i]);
             mylist.add(map);
         }
-        adapter = new SimpleAdapter(this,mylist,R.layout.list_lapangan,
-                new String[]{"judul","keterangan","Gambar"}, new int []{R.id.txt_judul,(R.id.txt_keterangan),(R.id.img) });
+        adapter = new SimpleAdapter(this,mylist,R.layout.riwayat,
+                new String[]{"judul","keterangan","keterangan2","keterangan3","Gambar"}, new int []{R.id.txt_judul,(R.id.txt_keterangan),(R.id.txt_keterangan2),(R.id.txt_keterangan3),(R.id.img) });
         listView.setAdapter(adapter);
     }
+
 
 }

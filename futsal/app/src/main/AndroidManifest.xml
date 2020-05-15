@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Buat_akun"></activity>
-        <activity android:name=".Listfutsal">
+        <activity android:name=".Riwayat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
