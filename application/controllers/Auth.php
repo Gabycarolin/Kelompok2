@@ -12,7 +12,30 @@ class Auth extends CI_Controller{
 
 
 	public function index(){
-		$this->load->view('auth/v_login');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim'); // validasi username
+		$this->form_validation->set_rules('password', 'Password', 'required|trim'); // validasi password
+
+		// validasi form login jika tidak diisi apa"
+		if($this->form_validation->run() == false){
+
+			// akan diarahkan kembali ke form login
+			$data['title'] = 'Login SIBALL';
+			$this->load->view('auth/v_login', $data);
+
+		}else{
+			// mengarah ke function _masuk
+			$this->_masuk();
+
+		}
+	}
+
+	private function _masuk(){
+
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
+		$user = $this->m_user->auth_admin($username, $password); 
+
 	}
 
 
