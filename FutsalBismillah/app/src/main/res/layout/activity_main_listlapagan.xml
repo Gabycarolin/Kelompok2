@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main_Riwayat"
+    android:id="@+id/activity_main_listlapangan"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.futsalbismillah.Riwayat"
+    tools:context="com.example.futsalbismillah.Listlapangan"
     android:background="@color/colorPrimaryDark"
 
 
@@ -18,8 +18,8 @@
         android:layout_gravity="right"
         android:paddingTop="5dp"
         android:paddingLeft="40dp"
-        android:text="Riwayat"
-        android:textSize="25dp"
+        android:text="Pilih Lapangan "
+        android:textSize="30dp"
         android:textColor="#FFFFFF"
         tools:ignore="MissingConstraints" />
     <ListView
