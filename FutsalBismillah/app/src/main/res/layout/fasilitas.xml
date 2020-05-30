@@ -309,6 +309,24 @@
         tools:layout_editor_absoluteY="572dp" />
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:paddingLeft="40dp"
+        android:text="Pilih Lapangan "
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        android:layout_marginTop="50dp"
+
+        >
+    </ListView>
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -319,9 +337,9 @@
         app:layout_constraintStart_toStartOf="parent">
         <TextView
             android:id="@+id/navbarbawah"
-            android:layout_width="410dp"
+            android:layout_width="450dp"
             android:layout_height="45dp"
-            android:background="@drawable/bglist"
+            android:background="@color/colornavbar"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="-1dp"
             tools:layout_editor_absoluteY="686dp" />
@@ -332,7 +350,7 @@
             android:layout_width="50dp"
             android:layout_height="43dp"
             android:layout_marginStart="33dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="37dp"
             tools:layout_editor_absoluteY="688dp" />
 
@@ -341,8 +359,9 @@
             android:layout_width="36dp"
             android:layout_height="26dp"
             android:layout_marginTop="2dp"
+            android:src="@drawable/home"
             android:layout_marginStart="40dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,RtlCompat" />
 
         <TextView
             android:id="@+id/txthome"
@@ -354,7 +373,7 @@
             android:layout_marginTop="26dp"
             android:layout_marginStart="40dp"
             android:textSize="11dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,RtlCompat" />
 
         <Button
             android:id="@+id/btnriwayat"
@@ -362,7 +381,7 @@
             android:layout_width="51dp"
             android:layout_height="44dp"
             android:layout_marginStart="130dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="136dp"
             tools:layout_editor_absoluteY="686dp" />
 
@@ -372,7 +391,8 @@
             android:layout_height="26dp"
             android:layout_marginStart="140dp"
             android:layout_marginTop="2dp"
-            tools:ignore="MissingConstraints"
+            android:src="@drawable/riwayat"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="141dp"
             tools:layout_editor_absoluteY="690dp" />
 
@@ -386,7 +406,7 @@
             android:layout_marginStart="132dp"
             android:layout_marginTop="26dp"
             android:textSize="11dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="716dp" />
 
@@ -396,7 +416,7 @@
             android:layout_width="51dp"
             android:layout_height="44dp"
             android:layout_marginStart="233dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="234dp"
             tools:layout_editor_absoluteY="686dp" />
 
@@ -404,9 +424,10 @@
             android:id="@+id/tiket"
             android:layout_width="36dp"
             android:layout_height="26dp"
+            android:src="@drawable/etiket"
             android:layout_marginStart="240dp"
             android:layout_marginTop="2dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="243dp"
             tools:layout_editor_absoluteY="690dp" />
 
@@ -420,7 +441,7 @@
             android:textSize="11dp"
             android:layout_marginTop="26dp"
             android:layout_marginStart="235dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="234dp"
             tools:layout_editor_absoluteY="716dp" />
 
@@ -429,7 +450,7 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="51dp"
             android:layout_height="44dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             android:layout_marginStart="325dp"
             tools:layout_editor_absoluteX="321dp"
             tools:layout_editor_absoluteY="687dp" />
@@ -438,9 +459,10 @@
             android:id="@+id/akun"
             android:layout_width="36dp"
             android:layout_height="26dp"
+            android:src="@drawable/akun"
             android:layout_marginStart="335dp"
             android:layout_marginTop="3dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="336dp"
             tools:layout_editor_absoluteY="689dp" />
 
@@ -454,7 +476,7 @@
             android:layout_marginTop="26dp"
             android:textColor="#FFFFFF"
             android:textSize="11dp"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,RtlCompat"
             tools:layout_editor_absoluteX="335dp"
             tools:layout_editor_absoluteY="715dp" />
 

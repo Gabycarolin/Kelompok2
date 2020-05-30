@@ -12,7 +12,7 @@
         android:name=".AppController"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListFutsal">
+        <activity android:name=".Riwayat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

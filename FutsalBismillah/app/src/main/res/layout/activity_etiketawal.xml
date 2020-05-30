@@ -44,7 +44,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="57dp"
         android:layout_alignParentLeft="true"
-        android:text="Tiketnya gak ada nih. Yuk Booking Futsal Sekarang."
+        android:text="Anda masih belum booking lapangan .AYO BURUAN Booking!"
         android:textColor="#fff"
         android:textSize="25dp"
         android:layout_marginTop="320dp"

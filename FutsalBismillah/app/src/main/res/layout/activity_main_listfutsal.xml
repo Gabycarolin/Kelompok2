@@ -8,7 +8,7 @@
     android:id="@+id/activity_main_listfutsal"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.futsalbismillah.ListFutsal"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background"
 
 
     >
@@ -17,17 +17,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:paddingTop="5dp"
-        android:paddingLeft="40dp"
+        android:paddingTop="1dp"
+        android:paddingLeft="10dp"
         android:text="Pilih Lapangan "
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="#FFFFFF"
         tools:ignore="MissingConstraints" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_view"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
 
         >
     </ListView>
