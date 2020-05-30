@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        android:layout_marginBottom="696dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/fasilitas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:text="Fasilitas"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="414dp"
+        android:layout_height="235dp"
+        app:cardElevation="20dp"
+        android:layout_marginBottom="447dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/lap"
+            android:layout_width="414dp"
+            android:layout_height="242dp"
+            android:background="@drawable/lap"
+            tools:ignore="MissingConstraints" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="297dp"
+        android:layout_marginEnd="250dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="75dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bgicon"
+            android:radius="12dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="362dp" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginBottom="300dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="52dp" />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/parkir"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Area Parkir"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="297dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginStart="250dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bgicon"
+        android:radius="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/musola"
+        android:layout_width="91dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:text="Musholla"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="297dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="250dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bgicon"
+        android:radius="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="51dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/kantin"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Kantin"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="250dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bgicon"
+        android:radius="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/toilet"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Toilet"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="572dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="160dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bgicon"
+        android:radius="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tribun"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Tribun"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="572dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="250dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bgicon"
+        android:radius="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <ImageView
+        android:id="@+id/img6"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/keamanan"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Keamanan"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="572dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:paddingLeft="40dp"
+        android:text="Pilih Lapangan "
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        android:layout_marginTop="50dp"
+
+        >
+    </ListView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/navbarbawah"
+            android:layout_width="450dp"
+            android:layout_height="45dp"
+            android:background="@color/colornavbar"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="686dp" />
+
+        <Button
+            android:id="@+id/btnhome"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="33dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="688dp" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/home"
+            android:layout_marginStart="40dp"
+            tools:ignore="MissingConstraints,RtlCompat" />
+
+        <TextView
+            android:id="@+id/txthome"
+            android:layout_width="37dp"
+            android:layout_height="16dp"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="40dp"
+            android:textSize="11dp"
+            tools:ignore="MissingConstraints,RtlCompat" />
+
+        <Button
+            android:id="@+id/btnriwayat"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="51dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="130dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="686dp" />
+
+        <ImageView
+            android:id="@+id/riwayat"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/riwayat"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="141dp"
+            tools:layout_editor_absoluteY="690dp" />
+
+        <TextView
+            android:id="@+id/txtriwayat"
+            android:layout_width="53dp"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:text="Riwayat"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="26dp"
+            android:textSize="11dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <Button
+            android:id="@+id/btntiket"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="51dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="233dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="686dp" />
+
+        <ImageView
+            android:id="@+id/tiket"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:src="@drawable/etiket"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="2dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="243dp"
+            tools:layout_editor_absoluteY="690dp" />
+
+        <TextView
+            android:id="@+id/txttiket"
+            android:layout_width="49dp"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:text="E-Tiket"
+            android:textColor="#FFFFFF"
+            android:textSize="11dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="235dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="234dp"
+            tools:layout_editor_absoluteY="716dp" />
+
+        <Button
+            android:id="@+id/btnakun"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="51dp"
+            android:layout_height="44dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            android:layout_marginStart="325dp"
+            tools:layout_editor_absoluteX="321dp"
+            tools:layout_editor_absoluteY="687dp" />
+
+        <ImageView
+            android:id="@+id/akun"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:src="@drawable/akun"
+            android:layout_marginStart="335dp"
+            android:layout_marginTop="3dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="689dp" />
+
+        <TextView
+            android:id="@+id/txtakun"
+            android:layout_width="37dp"
+            android:layout_height="16dp"
+            android:gravity="center"
+            android:text="Akun"
+            android:layout_marginStart="335dp"
+            android:layout_marginTop="26dp"
+            android:textColor="#FFFFFF"
+            android:textSize="11dp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="335dp"
+            tools:layout_editor_absoluteY="715dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
