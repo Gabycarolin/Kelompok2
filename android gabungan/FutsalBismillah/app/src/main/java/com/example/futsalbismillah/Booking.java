@@ -34,11 +34,7 @@ public class Booking extends AppCompatActivity {
             }
         });
 
-        /**
-         * Kita menggunakan format tanggal dd-MM-yyyy
-         * jadi nanti tanggal nya akan diformat menjadi
-         * misalnya 01-12-2017
-         */
+
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
         tvDateResult = (TextView) findViewById(R.id.tv_dateresult);
