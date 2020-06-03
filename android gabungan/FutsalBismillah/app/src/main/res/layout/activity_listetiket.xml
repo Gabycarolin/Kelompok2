@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="140dp"
         android:background="@color/colorbooking"
         android:orientation="horizontal"
         >
@@ -25,7 +25,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
@@ -39,23 +39,27 @@
                 android:textColor="@color/colorwhite"
                 android:textSize="20sp" />
 
+
+
+            <TextView
+                android:id="@+id/txt_tanggaletiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senin 24 Mei 2020"
+                android:textColor="@color/colorwhite" />
+            <TextView
+                android:id="@+id/txt_jametiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.00-22.00"
+                android:textColor="@color/colorwhite" />
             <TextView
                 android:id="@+id/txt_keterangan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
                 android:text="Kode Booking : E41180998"
                 android:textColor="@color/colorwhite" />
-
-            <TextView
-                android:id="@+id/txt_tanggal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Senin 24 Mei 2020"
-                android:textAllCaps="true"
-                android:textColor="@color/colorwhite"
-                android:textSize="20sp" />
 
         </LinearLayout>
     </LinearLayout>

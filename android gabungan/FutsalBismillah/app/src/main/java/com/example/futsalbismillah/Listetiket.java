@@ -16,6 +16,7 @@ public class Listetiket extends AppCompatActivity {
     String[] jdl;
     String[] ktr;
     String [] ktr_tgl;
+    String [] ktr_jam;
     int[] img;
 
     @Override
@@ -35,18 +36,22 @@ public class Listetiket extends AppCompatActivity {
         ktr_tgl = new String[]{
                 "Senin 24 Mei 2020","Minggu 1 Mei 2020"
         };
+        ktr_jam = new String[]{
+                "20.00-22.00","17.00-20.00"
+        };
 
         mylist = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < jdl.length; i++) {
             map = new HashMap<String, Object>();
             map.put("judul", jdl[i]);
             map.put("keterangan", ktr[i]);
-            map.put("Tanggal", ktr_tgl[i]);
+            map.put("tanggaletiket", ktr_tgl[i]);
+            map.put("jametiket", ktr_jam[i]);
             map.put("Gambar", Integer.toString(img[i]));
             mylist.add(map);
         }
         adapter = new SimpleAdapter(this, mylist, R.layout.activity_listetiket,
-                new String[]{"judul", "keterangan","tanggal", "Gambar"}, new int[]{R.id.txt_judul, (R.id.txt_keterangan),(R.id.txt_tanggal), (R.id.img)});
+                new String[]{"judul", "keterangan","tanggaletiket","jametiket", "Gambar"}, new int[]{R.id.txt_judul, (R.id.txt_keterangan),(R.id.txt_tanggaletiket),(R.id.txt_jametiket), (R.id.img)});
         listView.setAdapter(adapter);
     }
 }

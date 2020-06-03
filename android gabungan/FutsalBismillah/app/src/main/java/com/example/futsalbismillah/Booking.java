@@ -2,9 +2,8 @@ package com.example.futsalbismillah;
 
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
-
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -16,21 +15,24 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-/**
- * Created by Herdi_WORK on 20.01.17.
- */
 
 public class Booking extends AppCompatActivity {
-
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private TextView tvDateResult;
     private Button btDatePicker;
-
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+        TextView btn = (TextView) findViewById(R.id.cari);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent inte = new Intent(Booking.this, ListFutsal.class);
+                startActivity(inte);
+            }
+        });
 
         /**
          * Kita menggunakan format tanggal dd-MM-yyyy
@@ -50,7 +52,7 @@ public class Booking extends AppCompatActivity {
 
     }
 
-    private void showDateDialog(){
+        private void showDateDialog () {
 
         /**
          * Calendar untuk mendapatkan tanggal sekarang
@@ -78,14 +80,17 @@ public class Booking extends AppCompatActivity {
                 /**
                  * Update TextView dengan tanggal yang kita pilih
                  */
-                tvDateResult.setText("Tanggal dipilih : "+dateFormatter.format(newDate.getTime()));
+                tvDateResult.setText("Tanggal dipilih : " + dateFormatter.format(newDate.getTime()));
             }
 
-        },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
         /**
          * Tampilkan DatePicker dialog
          */
         datePickerDialog.show();
     }
-}
+    }
+
+
+

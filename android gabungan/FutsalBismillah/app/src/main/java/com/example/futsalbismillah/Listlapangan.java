@@ -20,7 +20,7 @@ public class Listlapangan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_main_listlapagan);
+        setContentView(R.layout.activity_main_listlapangan);
         listView = (ListView) findViewById(R.id.list_view);
 
         jdl = new String[] {

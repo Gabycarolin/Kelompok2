@@ -7,16 +7,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/background"
     tools:context=".MainActivity"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking"
+        android:textColor="#fff"
+        android:textSize="33dp"
+        android:paddingStart="25dp"
+        tools:ignore="MissingConstraints" />
+
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="270dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="365dp"
-        android:background="@color/colorbooking"
         app:cardCornerRadius="17dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,20 +36,28 @@
         tools:ignore="RtlCompat"
         >
 
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Tanggal_Booking"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:layout_height="match_parent"
+            android:background="@color/colorbooking"
             >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:text="Pilih Tanggal"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:typeface="normal" />
             <Button
                 android:id="@+id/bt_datepicker"
-                android:text="Tanggal Booking"
-                android:layout_marginRight="95dp"
-                android:layout_width="140dp"
+                android:text="TanggaL Booking"
+                android:layout_width="300dp"
                 android:layout_height="35dp" />
             <TextView
                 android:text="Tanggal dipilih : "
@@ -50,20 +68,9 @@
 
 
 
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/durasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="left"
-            android:text="Durasi Penyewaan (/Jam)"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:typeface="normal" />
         <TextView
             android:id="@+id/jam_mulai"
             android:layout_width="match_parent"
@@ -82,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/Tanggal_Booking"
             android:layout_marginLeft="1dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="95dp"
             android:layout_marginRight="10dp"
             android:orientation="vertical"
             android:paddingStart="50dp"
@@ -102,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="80dp"
             android:layout_marginLeft="10dp"
             android:gravity="left"
             android:text="Durasi Penyewaan (/Jam)"
@@ -130,7 +137,7 @@
                 android:padding="15dp"></Spinner>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/cari"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/editText5"
