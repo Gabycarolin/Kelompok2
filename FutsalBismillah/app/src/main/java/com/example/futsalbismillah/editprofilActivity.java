@@ -29,7 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class editprofilActivity extends AppCompatActivity {
     private EditText nama, alamat, email, telp, username, password;
     private Button simpan, batal;
-    private static String URL_EDIT ="http://192.168.43.239/siballuhuy/api/customer/edit";
+    private static String URL_EDIT ="http://192.168.1.68/siballuhuy/api/customer/edit";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

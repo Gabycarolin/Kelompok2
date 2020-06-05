@@ -70,11 +70,17 @@ public class loginActivity extends AppCompatActivity {
 
                     if(res.getBoolean("status")){
                         JSONObject respon = res.getJSONObject("data");
-//
+
                                     Toast.makeText(loginActivity.this,
                                             "berhasil login", Toast.LENGTH_SHORT)
                                             .show();
-                                    
+                                    Preferences.setKeyUsernameSedangLogin(getBaseContext(),respon.getString("username_cust"));
+                                    Preferences.setNama(getBaseContext(),respon.getString("nama_cust"));
+                                    Preferences.setAlamat(getBaseContext(),respon.getString("alamat_cust"));
+                                    Preferences.setTelepon(getBaseContext(),respon.getString("telp_cust"));
+                                    Preferences.setEmail(getBaseContext(),respon.getString("email_cust"));
+                                    Preferences.setPassword(getBaseContext(),respon.getString("password_cust"));
+                                    Preferences.setId(getBaseContext(),respon.getString("id_cust"));
                                     Intent intent = new Intent(loginActivity.this, MainActivity.class);
                                     startActivity(intent);
 

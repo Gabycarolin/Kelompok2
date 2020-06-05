@@ -95,4 +95,6 @@ public class Preferences {
     public static String getId(Context context ) {
         return getSharedPreference(context).getString(ID, "");
     }
+
+
 }
