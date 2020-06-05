@@ -92,5 +92,20 @@
                 }
             }
 
+            public function update($id_cust){
+            $d = $_POST;
+            
+                $arr = 
+                [
+                    'nama_cust' => $this->input->post('nama_cust'),
+                    'alamat_cust' => $this->input->post('alamat_cust'),
+                    'telp_cust' => $this->input->post('telp_cust'),
+                    'email_cust' => $this->input->post('email_cust'),
+                    'username_cust' => $this->input->post('username_cust'),
+                    'password_cust' => $this->input->post('password_cust')
+                ];
+            
+            }
         }
+    
 ?>
