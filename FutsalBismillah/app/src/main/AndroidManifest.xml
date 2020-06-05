@@ -21,9 +21,14 @@
         </activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".tiketActivity" />
+        <activity android:name=".buatakunActivity"/>
         <activity android:name=".akunActivity" />
         <activity android:name=".databookingActivity"/>
         <activity android:name=".tiketawalActivity"/>
+        <activity android:name=".ListFutsal"/>
+        <activity android:name=".Listlapangan"/>
+        <activity android:name=".Riwayat"/>
+        <activity android:name=".editprofilActivity"/>
     </application>
 
 </manifest>

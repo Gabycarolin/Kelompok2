@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="navbar">#35516C</color>
+
+
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colornavbar">#353A61</color>
+    <color name="colorbooking">#464C63</color>
+    <color name="colorblack">#141414</color>
+    <color name="strokecolor">#FF777777</color>
+    <color name="pagecolor">#000000</color>
 </resources>

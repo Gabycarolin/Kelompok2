@@ -1,27 +1,19 @@
 package com.example.futsalbismillah;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -32,8 +24,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class loginActivity extends AppCompatActivity {
     private EditText username, password;
-    private Button login;
-    private static String URL ="http://192.168.43.239/siballuhuy/api/auth/login";
+    private Button login, daftar;
+    private static String URL ="http://192.168.1.68/siballuhuy/api/auth/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +34,7 @@ public class loginActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.textView);
+        daftar = findViewById(R.id.daftardisini);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +47,14 @@ public class loginActivity extends AppCompatActivity {
                     username.setError("masukkan username");
                     password.setError("masukkan password");
                 }
+            }
+        });
+
+        daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this, buatakunActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -69,24 +70,11 @@ public class loginActivity extends AppCompatActivity {
 
                     if(res.getBoolean("status")){
                         JSONObject respon = res.getJSONObject("data");
-                                    String name = respon.getString("nama_cust").trim();
-                                    String alamat = respon.getString("alamat_cust").trim();
-                                    String email = respon.getString("email_cust").trim();
-                                    String telp = respon.getString("telp_cust").trim();
-                                    String username = respon.getString("username_cust").trim();
-                                    String password = respon.getString("password_cust").trim();
 //
                                     Toast.makeText(loginActivity.this,
-                                            "berhasil login. \nYour Name : "
-                                                    +name+"\nYour Alamat : "
-                                                    +alamat, Toast.LENGTH_SHORT)
+                                            "berhasil login", Toast.LENGTH_SHORT)
                                             .show();
-                                    Preferences.setKeyUsernameSedangLogin(getBaseContext(), username);
-                                    Preferences.setNama(getBaseContext(), name);
-                                    Preferences.setAlamat(getBaseContext(), alamat);
-                                    Preferences.setEmail(getBaseContext(), email);
-                                    Preferences.setTelepon(getBaseContext(), telp);
-                                    Preferences.setPassword(getBaseContext(), password);
+                                    
                                     Intent intent = new Intent(loginActivity.this, MainActivity.class);
                                     startActivity(intent);
 

@@ -12,6 +12,7 @@ public class Preferences {
     static final String TELEPON = "telepon";
     static final String EMAIL ="email";
     static final String PASSWORD = "password";
+    static final String ID = "id";
 
     private static SharedPreferences getSharedPreference(Context context){
         return PreferenceManager.getDefaultSharedPreferences(context);
@@ -83,5 +84,15 @@ public class Preferences {
         editor.remove(KEY_USERNAME_SEDANG_LOGIN);
         editor.remove(KEY_STATUS_SEDANG_LOGIN);
         editor.apply();
+    }
+
+    public static void setId(Context context, String id_cust){
+        SharedPreferences.Editor editor = getSharedPreference(context).edit();
+        editor.putString(ID, id_cust);
+        editor.apply();
+    }
+
+    public static String getId(Context context ) {
+        return getSharedPreference(context).getString(ID, "");
     }
 }
