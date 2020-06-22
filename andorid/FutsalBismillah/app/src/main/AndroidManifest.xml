@@ -12,7 +12,7 @@
         android:name=".AppController"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loginActivity">
+        <activity android:name=".Lupapassword">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +29,7 @@
         <activity android:name=".Listlapangan"/>
         <activity android:name=".Riwayat"/>
         <activity android:name=".editprofilActivity"/>
+
     </application>
 
 </manifest>

@@ -24,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class loginActivity extends AppCompatActivity {
     private EditText username, password;
-    private Button login, daftar;
+    private Button login, daftar,lupapassword;
     private static String URL ="http://192.168.43.233/siballuhuy/api/auth/login";
 
     @Override
@@ -35,6 +35,7 @@ public class loginActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         login = findViewById(R.id.textView);
         daftar = findViewById(R.id.daftardisini);
+        lupapassword = findViewById(R.id.lupapassword);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +56,13 @@ public class loginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(loginActivity.this, buatakunActivity.class);
                 startActivity(intent);
+            }
+        });
+        lupapassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindah = new Intent(loginActivity.this, Lupapassword.class);
+                startActivity(pindah);
             }
         });
     }
