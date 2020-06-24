@@ -70,6 +70,12 @@
                   <p>Dashboard Transaksi</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?= base_url('dashboard/rekapTrx'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard Rekap Transaksi</p>
+                </a>
+              </li>
             <?php } ?>
             </ul>
           </li>
