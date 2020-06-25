@@ -50,7 +50,13 @@ public class loginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        lupapassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this, Lupapassword.class);
+                startActivity(intent);
+            }
+        });
         daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
