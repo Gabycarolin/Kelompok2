@@ -8,7 +8,7 @@ class Lapangan extends REST_Controller{
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('m_Futsal');
+		$this->load->model('M_futsal');
 	}	
 	
 	public function index_post(){
@@ -24,10 +24,10 @@ class Lapangan extends REST_Controller{
 
 		$jamAkhir = (new DateTime($combine))->modify($durasi)->modify('+1 seconds')->format("Y-m-d H:i:s");
 
-		$lapangan = $this->M_Futsal->lapangan($idFut)->result();
+		$lapangan = $this->M_futsal->lapangan($idFut)->result();
 		
 		foreach($lapangan as $lapang){
-			$tersedia = $this->M_Futsal->tersedia($idFut, $lapang->id_lapangan, $tanggal, $jamAwal1s, $jamAkhir);
+			$tersedia = $this->M_futsal->tersedia($idFut, $lapang->id_lapangan, $tanggal, $jamAwal1s, $jamAkhir);
 
 			if($tersedia->num_rows() <= 0){
 				echo "Lapangan ".$lapang->id_lapangan." Tersedia";
