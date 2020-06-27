@@ -8,18 +8,14 @@ class Futsal extends REST_Controller{
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('m_futsal');
+		$this->load->model('M_futsal');
 
 	}
 
 	public function index_get(){
 		$id = $this->get('id_futsal');
-		if($id == ''){
-			$futsal = $this->m_futsal->tampilFut()->result();
-		}else{
-			//$this->db->where('id_futsal', $id);
-			$futsal = $this->m_futsal->specFut($id)->result();
-		}
+
+		$futsal = $this->m_futsal->lapangan($id)->result();
 		$this->response($futsal, REST_Controller::HTTP_OK);
 	}
 
