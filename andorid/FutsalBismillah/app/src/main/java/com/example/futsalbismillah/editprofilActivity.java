@@ -48,7 +48,7 @@ public class editprofilActivity extends AppCompatActivity {
         batal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                finish();
             }
         });
 

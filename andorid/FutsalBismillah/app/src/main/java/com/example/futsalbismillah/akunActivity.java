@@ -50,6 +50,14 @@ public class akunActivity extends Fragment {
                 getActivity().finish();
             }
         });
+
+        v.findViewById(R.id.editprofil).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),editprofilActivity.class);
+                startActivity(intent);
+            }
+        });
         return v;
         }
     }

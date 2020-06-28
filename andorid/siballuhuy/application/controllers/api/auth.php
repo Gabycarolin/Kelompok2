@@ -5,6 +5,7 @@
         function __construct(){
             parent::__construct();
             $this->load->database();
+            $this->load->helper('string');
             $this->load->model('m_login');
             $this->load->model('m_daftar');
         }
@@ -91,21 +92,117 @@
                     $this->response("provide complete user info to add", REST_Controller::HTTP_BAD_REQUEST);
                 }
             }
+            
 
             public function update($id_cust){
             $d = $_POST;
             
                 $arr = 
                 [
-                    'nama_cust' => $this->input->post('nama_cust'),
+                    'nama_cust' => $this->input->post('nama_cust'), 
                     'alamat_cust' => $this->input->post('alamat_cust'),
                     'telp_cust' => $this->input->post('telp_cust'),
                     'email_cust' => $this->input->post('email_cust'),
                     'username_cust' => $this->input->post('username_cust'),
                     'password_cust' => $this->input->post('password_cust')
                 ];
+
+                $result = array();
+
+                if(mysqli_num_rows($respone)== 1){
+                    if($row = mysli_fetch_assoc($respone)){
+                        $h['nama_cust'] = $row['nama_cust'];
+                        $h['alamat_cust'] = $row['alamat_cust'];
+                        $h['telp_cust'] = $row['telp_cust'];
+                        $h['email_cust'] = $row['email_cust'];
+                        $h['username_cust'] = $row['username_cust'];
+                        $h['password_cust'] = $row['password_cust'];
+                        $h['password_cust'] = $row['password_cust'];
+
+                        array_push($arr, $h);
+
+                        $result["sukses"] = "1";
+                        echo json_encode($result);
+                    }
+                }else{
+                    $result["sukses"] = "1";
+                    $result["message"] = "Error";
+                    echo json_encode;
+                }
             
             }
-        }
+
+            public function lupa_post()
+            {
+                $email_cust = $this->input->post('email_cust');
+                if($email_cust){
+                    $cek = $this->db->get_where('tb_customer', ['email_cust' => 
+                    $email_cust])->row_array();
+                    if($cek){
+                        // $cektoken = $this->db->get_where('tb_token', ['email_cust' => 
+                        // $email_cust, 'tipe' => 'lupapassword']);
+
+                        //menyiapkan token
+                        $token = base64_encode(random_string('alnum', 32));
+                        $data = [
+                            'email_cust' => $email_cust,
+                            'tipe' => 'lupapassword',
+                            'waktu_buat' => time()
+                        ];
+                            //respon rest api
+                            $result['success'] = 1;
+                            $result['message'] = 'silahkan cek email anda untuk aktifasi';
+                            echo json_encode($result);
+                       
+                        
+                    }else{
+                        $result['success'] =0;
+                        $result['message'] = 'email belum terdaftar';
+                        echo json_encode($result);
+                    }
+                }else{
+                    $result['success'] = 0;
+                    $result['message'] = 'key dan value belum diisi';
+                    echo json_encode($result);
+                }
+            }
+
+            function kirim($token, $type)
+            {
+                $config = [
+                    'protocol' => 'smtp',
+                    'smtp_host' => 'ssl://smtp.googlemail.com',
+                    'smtp_user' => 'cobaandro21@gmail.com',
+                    'smtp_pass' => 'tahatiunyu',
+                    'smtp_port' => 465,
+                    'mailtype' => 'html',
+                    'charset' => 'utf-8',
+                    'newline' => "\r\n"
+                ];
+
+                $this->load->library('email', $config);
+                $this->email->initialize($config);
+
+                $this->email->from('cobaandro21@gmail.com', 'Siball');
+                $this->email->to($this->input->post('email_cust'));
+                if($type == 'verify'){
+                    $this->email->subject('Aktivasi Akun');
+                    $this->email->message('Aktivasi akun anda
+                    <a href="'. base_url() . 'auth/verifikasi?email=' 
+                    . $this->input->post('email_cust') .'&token=' . urlencode($token) . '">disini</a>');
+                }else if($type == 'lupapassword'){
+                    $this->email->subject('reset password');
+                    $this->email->message('reset password anda
+                    <a href="' . base_url() . 'auth/resetpassword?email=' 
+                    . $this->input->post('email_cust') . '&token=' . urlencode($token) . '">disini</a>');
+                }
+
+                if ($this->email->send()){
+                    return true;
+                }
+            }
+
+            }
+        
     
 ?>
