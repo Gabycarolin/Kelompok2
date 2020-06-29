@@ -29,7 +29,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class editprofilActivity extends AppCompatActivity {
     private EditText nama, alamat, email, telp, username, password;
     private Button simpan, batal;
-    private static String URL_EDIT ="http://192.168.1.68/siballuhuy/api/customer/edit";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +42,8 @@ public class editprofilActivity extends AppCompatActivity {
         password = findViewById(R.id.editpassword);
         simpan = findViewById(R.id.simpan);
         batal = findViewById(R.id.batal);
+        tampildata();
 
-        getuserdetail();
         batal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,47 +54,90 @@ public class editprofilActivity extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                updatedata(nama.getText().toString(), alamat.getText().toString(), email.getText().toString(), telp.getText().toString(),
+                        username.getText().toString(), password.getText().toString());
+//                finish();
+                Intent intent = new Intent(editprofilActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
+
+
     }
+    private void updatedata(final String nama, final String alamat,
+                            final String email, final String telp, final String username, final String password){
+        String URL_EDIT ="http://192.168.1.68/siballuhuy/api/auth/edit_simpan/" + Preferences.getId(getBaseContext());
+        StringRequest request = new StringRequest(Request.Method.POST, URL_EDIT, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject res = new JSONObject(response);
 
-    private void getuserdetail(){
-        Log.d("pesan", "idnya "+Preferences.getId(getBaseContext()));
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_EDIT+"/"+Preferences.getId(getBaseContext()),
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            JSONObject data = jsonObject.getJSONObject("data");
-
-                            nama.setText(data.getString("nama_cust"));
-                            alamat.setText(data.getString("nama_cust"));
-                            email.setText(data.getString("email_cust"));
-                            telp.setText(data.getString("telp_cust"));
-                            password.setText(data.getString("password_cust"));
-                            username.setText(data.getString("username_cust"));
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Toast.makeText(editprofilActivity.this,"error", Toast.LENGTH_SHORT).show();
-                        }
+                    if (res.getBoolean("status")) {
+                        JSONObject respon = res.getJSONObject("data");
+                        Toast.makeText(editprofilActivity.this, "Data Berhasil Di Simpan", Toast.LENGTH_SHORT).show();
+                        Preferences.setKeyUsernameSedangLogin(getBaseContext(),respon.getString("username_cust"));
+                        Preferences.setNama(getBaseContext(),respon.getString("nama_cust"));
+                        Preferences.setAlamat(getBaseContext(),respon.getString("alamat_cust"));
+                        Preferences.setTelepon(getBaseContext(),respon.getString("telp_cust"));
+                        Preferences.setEmail(getBaseContext(),respon.getString("email_cust"));
+                        Preferences.setPassword(getBaseContext(),respon.getString("password_cust"));
+                        Preferences.setId(getBaseContext(),respon.getString("id_cust"));
+                    } else {
+                        Toast.makeText(getBaseContext(), res.getString("message"), Toast.LENGTH_SHORT).show();
                     }
-                }, new Response.ErrorListener() {
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(editprofilActivity.this, "error" + error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("nama_cust", nama);
+                params.put("alamat_cust", alamat);
+                params.put("email_cust", email);
+                params.put("telp_cust", telp);
+                params.put("username_cust", username);
+                params.put("password_cust", password);
+
+                return params;
+            }
+        };
+        AppController.getInstance().addToRequestQueue(request);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getuserdetail();
+    private void tampildata(){
+        String url = "http://192.168.1.68/siballuhuy/api/customer/edit/" + Preferences.getId(getBaseContext());
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject res = new JSONObject(response);
+                        JSONObject respon = res.getJSONObject("data");
+//                        Toast.makeText(editprofilActivity.this, "Data Berhasil Update", Toast.LENGTH_SHORT).show();
+                        nama.setText(respon.getString("nama_cust"));
+                        alamat.setText(respon.getString("alamat_cust"));
+                        email.setText(respon.getString("email_cust"));
+                        telp.setText(respon.getString("telp_cust"));
+                        username.setText(respon.getString("username_cust"));
+                        password.setText(respon.getString("password_cust"));
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        AppController.getInstance().addToRequestQueue(request);
     }
 }
