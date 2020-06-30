@@ -71,16 +71,6 @@ public class Lupapassword extends AppCompatActivity {
 
 
         }
-//        public void cekForm()
-//        {EmailHolder= Email.getText().toString().trim();
-//        if (TextUtils.isEmpty(EmailHolder))
-//        {
-//            cek = false;
-//        }else {
-//            cek= true;
-//        }
-//
-//    }
     public void kirimEmail(final String email)
     {
         progressDialog.setMessage("Tunggu sebentar");
