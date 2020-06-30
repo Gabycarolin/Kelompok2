@@ -8,6 +8,8 @@
             $this->load->helper('string');
             $this->load->model('m_login');
             $this->load->model('m_daftar');
+            $this->load->model('m_edit');
+            $this->load->model('m_ubahpassword');
         }
 
         function index_get(){
@@ -94,43 +96,33 @@
             }
             
 
-            public function update($id_cust){
+            public function edit_simpan_post($id_cust){
             $d = $_POST;
             
-                $arr = 
+                $data = 
                 [
-                    'nama_cust' => $this->input->post('nama_cust'), 
+                    'nama_cust' => $this->input->post('nama_cust'),
                     'alamat_cust' => $this->input->post('alamat_cust'),
                     'telp_cust' => $this->input->post('telp_cust'),
                     'email_cust' => $this->input->post('email_cust'),
                     'username_cust' => $this->input->post('username_cust'),
                     'password_cust' => $this->input->post('password_cust')
                 ];
-
+            
                 $result = array();
 
-                if(mysqli_num_rows($respone)== 1){
-                    if($row = mysli_fetch_assoc($respone)){
-                        $h['nama_cust'] = $row['nama_cust'];
-                        $h['alamat_cust'] = $row['alamat_cust'];
-                        $h['telp_cust'] = $row['telp_cust'];
-                        $h['email_cust'] = $row['email_cust'];
-                        $h['username_cust'] = $row['username_cust'];
-                        $h['password_cust'] = $row['password_cust'];
-                        $h['password_cust'] = $row['password_cust'];
-
-                        array_push($arr, $h);
-
-                        $result["sukses"] = "1";
-                        echo json_encode($result);
-                    }
+                if($this->m_edit->update($data, $id_cust) == TRUE){
+                    $this->response([
+                        'status' => TRUE,
+                        'message' => 'Data Berhasil Di Simpan',
+                        'data' => $data
+                    ], REST_Controller::HTTP_OK);
                 }else{
-                    $result["sukses"] = "1";
-                    $result["message"] = "Error";
-                    echo json_encode;
+                    $this->response("Terjadi Kesalahan, silahkan coba lagi", REST_Controller::HTTP_BAD_REQUEST);
                 }
             
             }
+
 
             public function lupa_post()
             {
@@ -151,7 +143,7 @@
                         ];
                             //respon rest api
                             $result['success'] = 1;
-                            $result['message'] = 'silahkan cek email anda untuk aktifasi';
+                            $result['message'] = 'silahkan isi password baru';
                             echo json_encode($result);
                        
                         
@@ -167,40 +159,27 @@
                 }
             }
 
-            function kirim($token, $type)
-            {
-                $config = [
-                    'protocol' => 'smtp',
-                    'smtp_host' => 'ssl://smtp.googlemail.com',
-                    'smtp_user' => 'cobaandro21@gmail.com',
-                    'smtp_pass' => 'tahatiunyu',
-                    'smtp_port' => 465,
-                    'mailtype' => 'html',
-                    'charset' => 'utf-8',
-                    'newline' => "\r\n"
-                ];
-
-                $this->load->library('email', $config);
-                $this->email->initialize($config);
-
-                $this->email->from('cobaandro21@gmail.com', 'Siball');
-                $this->email->to($this->input->post('email_cust'));
-                if($type == 'verify'){
-                    $this->email->subject('Aktivasi Akun');
-                    $this->email->message('Aktivasi akun anda
-                    <a href="'. base_url() . 'auth/verifikasi?email=' 
-                    . $this->input->post('email_cust') .'&token=' . urlencode($token) . '">disini</a>');
-                }else if($type == 'lupapassword'){
-                    $this->email->subject('reset password');
-                    $this->email->message('reset password anda
-                    <a href="' . base_url() . 'auth/resetpassword?email=' 
-                    . $this->input->post('email_cust') . '&token=' . urlencode($token) . '">disini</a>');
+            public function ubah_password_post($id_cust){
+                $d = $_POST;
+                
+                    $data = 
+                    [
+                        'password_cust' => $this->input->post('password_cust')
+                    ];
+                
+                    $result = array();
+    
+                    if($this->m_ubahpassword->update($data, $id_cust) == TRUE){
+                        $this->response([
+                            'status' => TRUE,
+                            'message' => 'Password Berhasil Di Ubah',
+                            'data' => $data
+                        ], REST_Controller::HTTP_OK);
+                    }else{
+                        $this->response("Terjadi Kesalahan, silahkan coba lagi", REST_Controller::HTTP_BAD_REQUEST);
+                    }
+                
                 }
-
-                if ($this->email->send()){
-                    return true;
-                }
-            }
 
             }
         
