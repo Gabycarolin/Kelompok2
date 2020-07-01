@@ -12,7 +12,7 @@
         android:name=".AppController"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loginActivity">
+        <activity android:name=".Booking">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

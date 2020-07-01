@@ -62,7 +62,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="2dp"
-            android:text="TERBAYAR"
+            android:text="BAYAR DP"
             android:textSize="20dp"
             android:textColor="#FFFF0000" />
     </RelativeLayout>
