@@ -13,9 +13,9 @@ class Futsal extends REST_Controller{
 	}
 
 	public function index_get(){
-		$id = $this->get('id_futsal');
+		//$id = $this->get('id_futsal');
 
-		$futsal = $this->m_futsal->lapangan($id)->result();
+		$futsal = $this->m_futsal->tampilFut()->result();
 		$this->response($futsal, REST_Controller::HTTP_OK);
 	}
 
