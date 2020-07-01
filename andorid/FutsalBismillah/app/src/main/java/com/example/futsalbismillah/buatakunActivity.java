@@ -26,7 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class buatakunActivity extends AppCompatActivity {
         private EditText nama, alamat, telp, email, username, password, konfir;
         private Button simpan, kembali;
-        private static String URL = "http://192.168.1.68/siballuhuy/api/auth/registration";
+        private static String URL = "http://192.168.1.68/Kelompok2/api/auth/registration";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

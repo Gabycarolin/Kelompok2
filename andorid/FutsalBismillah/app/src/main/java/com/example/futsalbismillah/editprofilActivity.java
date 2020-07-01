@@ -66,7 +66,7 @@ public class editprofilActivity extends AppCompatActivity {
     }
     private void updatedata(final String nama, final String alamat,
                             final String email, final String telp, final String username, final String password){
-        String URL_EDIT ="http://192.168.1.68/siballuhuy/api/auth/edit_simpan/" + Preferences.getId(getBaseContext());
+        String URL_EDIT ="http://192.168.1.68/Kelompok2/api/auth/edit_simpan/" + Preferences.getId(getBaseContext());
         StringRequest request = new StringRequest(Request.Method.POST, URL_EDIT, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -113,7 +113,7 @@ public class editprofilActivity extends AppCompatActivity {
     }
 
     private void tampildata(){
-        String url = "http://192.168.1.68/siballuhuy/api/customer/edit/" + Preferences.getId(getBaseContext());
+        String url = "http://192.168.1.68/Kelompok2/api/customer/edit/" + Preferences.getId(getBaseContext());
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

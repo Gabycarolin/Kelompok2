@@ -43,7 +43,7 @@ public class Ubahpassword extends AppCompatActivity {
     }
 
     private void simpanpassword(final String password){
-        String url = "http://192.168.1.68/siballuhuy/api/auth/ubah_password/" + Preferences.getId(getBaseContext());
+        String url = "http://192.168.1.68/Kelompok2/api/auth/ubah_password/" + Preferences.getId(getBaseContext());
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

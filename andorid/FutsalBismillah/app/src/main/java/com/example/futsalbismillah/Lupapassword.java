@@ -36,7 +36,7 @@ public class Lupapassword extends AppCompatActivity {
     String EmailHolder;
     ProgressDialog progressDialog;
     RequestQueue requestQueue;
-    String Url =  "http://192.168.1.68/siballuhuy/api/auth/lupa";
+    String Url =  "http://192.168.1.68/Kelompok2/api/auth/lupa";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
