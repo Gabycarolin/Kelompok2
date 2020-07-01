@@ -8,7 +8,7 @@ class Futsal extends REST_Controller{
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('M_futsal');
+		$this->load->model('m_futsal');
 
 	}
 

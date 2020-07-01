@@ -25,7 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class loginActivity extends AppCompatActivity {
     private EditText username, password;
     private Button login, daftar,lupapassword;
-    private static String URL ="http://192.168.1.68/siballuhuy/api/auth/login";
+    private static String URL ="http://192.168.43.233/siballuhuy/api/auth/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
