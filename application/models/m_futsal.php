@@ -13,7 +13,7 @@ class M_futsal extends CI_Model{
 	}
 	// menampilkan futsal
 	public function lapangan($id_futsal){
-		return $lapangan = $this->db->query("SELECT * FROM tb_lapangan WHERE id_futsal = 'id_futsal'");
+		return $lapangan = $this->db->query("SELECT * FROM tb_lapangan WHERE id_futsal = '$id_futsal'");
 	}
 
 	public function tersedia($id_futsal, $id_lapangan, $tanggal, $jam_awal, $jam_akhir){		
