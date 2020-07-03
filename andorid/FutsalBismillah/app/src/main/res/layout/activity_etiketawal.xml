@@ -25,17 +25,17 @@
         android:background="#555"
         android:layout_marginTop="50dp"/>
 
-    <ListView
-        android:id="@+id/listviewtiket"
-        android:layout_width="match_parent"
-        android:layout_height="619dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="0dp"
-        android:visibility="gone"
-        android:layout_marginRight="0dp"></ListView>
+<!--    <ListView-->
+<!--        android:id="@+id/listviewtiket"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="619dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginTop="53dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginRight="0dp"></ListView>-->
 
     <TextView
         android:id="@+id/tiketkosong"
@@ -49,6 +49,143 @@
         android:textSize="25dp"
         android:layout_marginTop="320dp"
         android:layout_marginStart="57dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/found"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="237dp"
+                android:layout_height="42dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/background"
+                android:text="STATUS :"
+                android:textSize="20dp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="-"
+                android:textSize="20dp"
+                android:textColor="#FFFF0000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="304dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="162dp"
+            android:background="#464C63">
+
+            <TextView
+                android:id="@+id/namafutsal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="55sp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:text="-"
+                android:layout_alignParentLeft="true"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Booking :"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_marginTop="67sp"
+                android:layout_marginStart="58dp"/>
+
+            <TextView
+                android:id="@+id/kodebooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="-"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:layout_marginTop="67sp"
+                android:layout_marginStart="165dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail :"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/lapangankeberapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="170dp"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="195dp"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/jambooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00-10:00"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="195dp"
+                android:layout_marginStart="110dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/harga"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="-"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginTop="220dp"
+                android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
 
 
 

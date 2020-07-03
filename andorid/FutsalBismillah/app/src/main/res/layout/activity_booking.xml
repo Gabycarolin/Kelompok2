@@ -25,9 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="RtlCompat"
         >
-
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Tanggal_Booking"
             android:orientation="vertical"

@@ -2,36 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.futsalbismillah"
     android:targetSandboxVersion="1">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".AppController"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Booking">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Tersedia"></activity>
+        <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Booking" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".tiketActivity" />
-        <activity android:name=".buatakunActivity"/>
+        <activity android:name=".buatakunActivity" />
         <activity android:name=".akunActivity" />
-        <activity android:name=".databookingActivity"/>
-        <activity android:name=".tiketawalActivity"/>
-        <activity android:name=".ListFutsal"/>
-        <activity android:name=".Listlapangan"/>
-        <activity android:name=".Riwayat"/>
-        <activity android:name=".editprofilActivity"/>
-        <activity android:name=".Lupapassword"/>
-        <activity android:name=".Ubahpassword"/>
-
+        <activity android:name=".databookingActivity" />
+        <activity android:name=".tiketawalActivity" />
+        <activity android:name=".ListFutsal" />
+        <activity android:name=".Listlapangan" />
+        <activity android:name=".Riwayat" />
+        <activity android:name=".editprofilActivity" />
+        <activity android:name=".Lupapassword" />
+        <activity android:name=".Ubahpassword" />
     </application>
 
 </manifest>

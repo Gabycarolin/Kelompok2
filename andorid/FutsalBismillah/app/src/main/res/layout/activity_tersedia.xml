@@ -14,31 +14,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
-<Button
-    android:id="@+id/kembalilist"
-    android:layout_width="45dp"
-    android:layout_height="30dp"
-    android:layout_marginTop="10sp"
-    android:layout_marginStart="7sp"
-    android:background="@drawable/btnback"
-    tools:layout_editor_absoluteX="0dp"
-    style="?android:attr/borderlessButtonStyle"
-    tools:layout_editor_absoluteY="2dp"
-    tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/kembalilist"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="7sp"
+            android:background="@drawable/btnback"
+            tools:layout_editor_absoluteX="0dp"
+            style="?android:attr/borderlessButtonStyle"
+            tools:layout_editor_absoluteY="2dp"
+            tools:ignore="MissingConstraints"/>
 
-    <TextView
-        android:layout_width="238dp"
-        android:layout_height="45dp"
-        android:layout_gravity="right"
-        android:layout_marginStart="60dp"
-        android:paddingLeft="4dp"
-        android:paddingTop="5dp"
-        android:text="Pilih Lapangan "
-        android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="2dp" />
+        <TextView
+            android:layout_width="238dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:layout_marginStart="60dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="5dp"
+            android:text="Futsal Tersedia "
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="2dp" />
     </RelativeLayout>
 
     <LinearLayout
